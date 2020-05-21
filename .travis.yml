@@ -21,6 +21,9 @@ before_script:
 script:
   - ng build --prod --base-href https://alantanwk.github.io/bitcoin-order-app/
   - ng lint
+after_success:
+  - git push https://github.com/alantanwk/bitcoin-order-app development
+  - npm audit fix
 
   
 deploy:
@@ -30,6 +33,3 @@ deploy:
   local_dir: dist/bitcoin
   on:
     branch: development
-  after_success:
-   - git push https://github.com/alantanwk/bitcoin-order-app development
-   - npm audit fix
