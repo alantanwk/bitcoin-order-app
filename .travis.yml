@@ -28,3 +28,5 @@ deploy:
   local_dir: dist/bitcoin
   on:
     branch: development
+  after_success:
+   - git push https://github.com/alantanwk/bitcoin-order-app :development
