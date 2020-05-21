@@ -31,5 +31,5 @@ deploy:
   on:
     branch: development
   after_success:
-   - git push https://github.com/alantanwk/bitcoin-order-app :development
+   - git push https://github.com/alantanwk/bitcoin-order-app development
    - npm audit fix
