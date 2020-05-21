@@ -22,6 +22,7 @@ script:
   - ng build --prod --base-href https://alantanwk.github.io/bitcoin-order-app/
   - ng lint
 after_success:
+  github_token: $GITHUB_TOKEN
   - git push https://github.com/alantanwk/bitcoin-order-app development
   - npm audit fix
 
